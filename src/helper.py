@@ -7,7 +7,6 @@ def on_closing(stray_icon=None):
         global running
         if stray_icon:
              stray_icon.stop()
-        print('ae')
         running = False
 
 def root_setup():

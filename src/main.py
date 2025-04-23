@@ -1,7 +1,7 @@
 from stray import create_icon
 from key_handling import set_overlay_keys, update_keys
 from keys import Key
-import queue
+# import queue
 import helper
 
 root = helper.root_setup()
