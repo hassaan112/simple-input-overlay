@@ -1,0 +1,41 @@
+{
+    "keys": [
+        {
+            "key": "W",
+            "column": "1",
+            "row": "0",
+            "column-span": "1",
+            "row-span": "1",
+            "width": "100",
+            "height": "100"
+            
+        },
+        {
+            "key": "A",
+            "column": "0",
+            "row": "1",
+            "column-span": "1",
+            "row-span": "1",
+            "width": "100",
+            "height": "100"
+        },
+        {
+            "key": "S",
+            "column": "1",
+            "row": "1",
+            "column-span": "1",
+            "row-span": "1",
+            "width": "100",
+            "height": "100"
+        },
+        {
+            "key": "D",
+            "column": "2",
+            "row": "1",
+            "column-span": "1",
+            "row-span": "1",
+            "width": "100",
+            "height": "100"
+        }   
+    ]
+}
