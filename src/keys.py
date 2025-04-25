@@ -27,6 +27,7 @@ class Key(tk.Frame):
     #     self.label.configure(bg="white")
 
     def check_pressed(self):
+        self.parent.lift()
         if keyboard.is_pressed(self.text):
             self["bg"] = "white"
             self.label["bg"] = "white"
