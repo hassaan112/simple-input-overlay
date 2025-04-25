@@ -22,3 +22,16 @@ def root_setup(stray_icon):
     root.protocol("WM_DELETE_WINDOW", lambda: on_closing(stray_icon))
 
     return root
+
+import time
+class Timer():
+    def __init__(self):
+        self.time_start = time.time()
+        self.iterations = 0
+    
+    def update(self):
+        self.iterations += 1
+        if time.time() - self.time_start >= 1:
+            print(self.iterations)
+            self.time_start = time.time()
+            self.iterations = 0
