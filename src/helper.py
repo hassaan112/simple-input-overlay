@@ -12,8 +12,8 @@ def on_closing(stray_icon=None):
 def root_setup(stray_icon):
     root = tk.Tk()
     root.overrideredirect(True) # This line removes the title bar
-    root.geometry("400x300") # Set window size (optional)
-    transparency = 0.5
+    root.geometry("1400x300") # Set window size (optional)
+    transparency = 0.7
 
     root.attributes('-alpha', transparency)
     root.attributes('-transparentcolor', 'pink')

@@ -1,51 +1,38 @@
 from stray import create_icon
-from key_handling import InputHandler
-from key_handling import set_overlay_keys
-from keys import Key
-# import queue
-import helper
+from input_handling import InputHandler
+from input_handling import set_overlay_inputs
+from input_display import InputDisplay
+import helper, keyboard
+
 
 stray_icon = create_icon()
 root = helper.root_setup(stray_icon)
-keys: dict[str, Key] = set_overlay_keys(root)
-inp = InputHandler(keys=keys)
-# event_queue = queue.Queue()
+inputs, has_keys, has_mouse_buttons = set_overlay_inputs(root)
+input_handler = InputHandler(inputs, has_keys, has_mouse_buttons)
 
 def overlay_update():
-    if inp.pressed:
-        for key in inp.pressed:
-            keys[key].pressed()
-        inp.pressed = []
-    
-    if inp.released:
-        for key in inp.released:
-            keys[key].released()
-        inp.released = []
-    if inp.held_keys:
-        current_keys = list(inp.held_keys)
-        for key in current_keys:
-            keys[key].held()
+    if input_handler.pressed:
+        for input in input_handler.pressed:
+            inputs[input].pressed()
+        input_handler.pressed = []    
+
+    if input_handler.released:
+        for input in input_handler.released:
+            inputs[input].released()
+        input_handler.released = []
+
+    if input_handler.held_inputs:
+        current_inputs = list(input_handler.held_inputs)
+        for input in current_inputs:
+            inputs[input].held()
 
 
 def main():
     stray_icon.run_detached()
-    # for key in list(keys.values()):
-    #     keyboard.on_press_key(key.text, lambda e: )
-
-
     while helper.running:
+        # if keyboard.is_pressed("L"):
+        #     root.withdraw()
         overlay_update()
-        
-
-        # current_keys = list(inp.pressed_keys)
-        # for key in current_keys:
-        #     keys[key].held()
-        # update_keys(keys=keys)
-        # try:
-        #     event = event_queue.get_nowait()
-        #     event.key_pressed()
-        # except queue.Empty:
-        #     pass
         root.lift()
         root.update()
         root.update_idletasks()

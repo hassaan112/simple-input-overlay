@@ -1,7 +1,8 @@
 {
     "keys": [
         {
-            "key": "W",
+            "input": "w",
+            "name": "W",
             "column": "1",
             "row": "0",
             "column-span": "1",
@@ -11,7 +12,8 @@
             
         },
         {
-            "key": "A",
+            "input": "a",
+            "name": "A",
             "column": "0",
             "row": "1",
             "column-span": "1",
@@ -20,7 +22,8 @@
             "height": "100"
         },
         {
-            "key": "S",
+            "input": "s",
+            "name": "S",
             "column": "1",
             "row": "1",
             "column-span": "1",
@@ -29,13 +32,36 @@
             "height": "100"
         },
         {
-            "key": "D",
+            "input": "d",
+            "name": "D",
             "column": "2",
             "row": "1",
             "column-span": "1",
             "row-span": "1",
             "width": "100",
             "height": "100"
-        }   
+        },
+        {
+            "input": "space",
+            "name": "SPC",
+            "column": "0",
+            "row": "0",
+            "column-span": "1",
+            "row-span": "1",
+            "width": "100",
+            "height": "100"
+        }
+    ],
+    "mouse-buttons": [
+        {
+            "input": "right",
+            "name": "RMB",
+            "column": "2",
+            "row": "0",
+            "column-span": "1",
+            "row-span": "1",
+            "width": "100",
+            "height": "100"
+        }
     ]
 }
