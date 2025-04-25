@@ -6,7 +6,7 @@ running = True
 def on_closing(stray_icon=None):
         global running
         if stray_icon:
-             stray_icon.stop()
+            stray_icon.stop()
         running = False
 
 def root_setup(stray_icon):
@@ -18,5 +18,7 @@ def root_setup(stray_icon):
     root.attributes('-alpha', transparency)
     root.attributes('-transparentcolor', 'pink')
     root.config(bg='pink')
+    root.attributes("-topmost", True)
     root.protocol("WM_DELETE_WINDOW", lambda: on_closing(stray_icon))
+
     return root
