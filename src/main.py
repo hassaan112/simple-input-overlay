@@ -4,9 +4,10 @@ from keys import Key
 # import queue
 import helper
 
-root = helper.root_setup()
-keys: dict[str, Key] = set_overlay_keys(root)
 stray_icon = create_icon()
+root = helper.root_setup(stray_icon)
+keys: dict[str, Key] = set_overlay_keys(root)
+
 # event_queue = queue.Queue()
 
 def main():

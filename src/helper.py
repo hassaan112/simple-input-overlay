@@ -9,7 +9,7 @@ def on_closing(stray_icon=None):
              stray_icon.stop()
         running = False
 
-def root_setup():
+def root_setup(stray_icon):
     root = tk.Tk()
     root.overrideredirect(True) # This line removes the title bar
     root.geometry("400x300") # Set window size (optional)
@@ -18,5 +18,5 @@ def root_setup():
     root.attributes('-alpha', transparency)
     root.attributes('-transparentcolor', 'pink')
     root.config(bg='pink')
-    root.protocol("WM_DELETE_WINDOW", on_closing)
+    root.protocol("WM_DELETE_WINDOW", lambda: on_closing(stray_icon))
     return root
