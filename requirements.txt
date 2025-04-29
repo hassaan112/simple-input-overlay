@@ -1,0 +1,8 @@
+keyboard==0.13.5
+mouse==0.7.1
+packaging==25.0
+pillow==11.2.1
+pystray==0.19.5
+
+
+
